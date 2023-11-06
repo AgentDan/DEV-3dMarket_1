@@ -11,8 +11,6 @@ connectDB()
 app.use(cors())
 app.use(express.json({extended: true}))
 app.use('/api/', require('./routes/main'))
-// app.use('/api/auth', require('./routes/auth'))
-// Serve frontend
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, './client/build')));
 
